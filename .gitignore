@@ -1,75 +1,49 @@
 ```
-# Dependencies and third-party libraries
+# Dependencies and build artifacts
 3rdparty/
 
-# Build artifacts and temporary files
-*.o
-*.obj
-*.a
-*.lib
-*.so
-*.dll
-*.dylib
-*.exe
-*.out
+# Logs and temp files
+*.log
+*.tmp
+*.swp
 
-# Debug and release builds
-debug/
-release/
-build/
-dist/
-target/
-
-# IDE and editor files
+# Editors
 .vscode/
 .idea/
-*.swp
-*.swo
-*.tmp
 
-# Logs
-*.log
-
-# Environment files
+# Environment
 .env
 .env.local
 *.env.*
 
-# Coverage reports
+# Coverage
 coverage/
 htmlcov/
-*.coverage
+.coverage
 
-# Package managers
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Python specific
+# Python
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
+*.pyc
+*.pyo
+*.pyd
 .Python
-venv/
 env/
-ENV/
-
-# C/C++ specific
-*.i
-*.ii
-*.s
-*.su
-*.sln
-*.vcxproj
-*.vcxproj.filters
-
-# macOS
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git*
+!gitkeep
+!.gitattributes
+!.gitignore
 .DS_Store
-
-# Windows
 Thumbs.db
-ehthumbs.db
-Icon?
 ```
