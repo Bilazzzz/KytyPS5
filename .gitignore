@@ -1,26 +1,75 @@
 ```
-# Build artifacts
+# Dependencies and third-party libraries
+3rdparty/
+
+# Build artifacts and temporary files
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+
+# Debug and release builds
+debug/
+release/
 build/
-CMakeCache.txt
-CMakeFiles/
-CMakeScripts/
-_Deps/
-cmake_install.cmake
-Makefile
-DartConfiguration.tcl
-*.pc
-*.cmake
-*.bin
-*.stamp
-*.marks
-*.json
+dist/
+target/
 
-# Dependencies
-_deps/
-
-# Temp files
-tmp/
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
 
 # Logs
 *.log
+
+# Environment files
+.env
+.env.local
+*.env.*
+
+# Coverage reports
+coverage/
+htmlcov/
+*.coverage
+
+# Package managers
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# C/C++ specific
+*.i
+*.ii
+*.s
+*.su
+*.sln
+*.vcxproj
+*.vcxproj.filters
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Icon?
 ```

@@ -2330,14 +2330,20 @@ void RuntimeLinker::ParseProgramDynamicInfo(Program* program) {
 	GetDynValue(elf, &so_name, DT_SONAME);
 	program->dynamic_info->so_name = program->dynamic_info->str_table + so_name;
 
-	EXIT_NOT_IMPLEMENTED(elf->HasDynValue(DT_OS_NEEDED_MODULE) &&
-	                     elf->HasDynValue(DT_OS_NEEDED_MODULE_1));
-	EXIT_NOT_IMPLEMENTED(elf->HasDynValue(DT_OS_MODULE_INFO) &&
-	                     elf->HasDynValue(DT_OS_MODULE_INFO_1));
-	EXIT_NOT_IMPLEMENTED(elf->HasDynValue(DT_OS_IMPORT_LIB) &&
-	                     elf->HasDynValue(DT_OS_IMPORT_LIB_1));
-	EXIT_NOT_IMPLEMENTED(elf->HasDynValue(DT_OS_EXPORT_LIB) &&
-	                     elf->HasDynValue(DT_OS_EXPORT_LIB_1));
+	// Sony PS5 specific module/library tags - handle gracefully if both variants present
+	// These tags define module dependencies and library imports/exports for the Orbis ABI
+	if (elf->HasDynValue(DT_OS_NEEDED_MODULE) && elf->HasDynValue(DT_OS_NEEDED_MODULE_1)) {
+		LOG_WARNING(LOG_KytyLoader, "Both DT_OS_NEEDED_MODULE and DT_OS_NEEDED_MODULE_1 present - processing both");
+	}
+	if (elf->HasDynValue(DT_OS_MODULE_INFO) && elf->HasDynValue(DT_OS_MODULE_INFO_1)) {
+		LOG_WARNING(LOG_KytyLoader, "Both DT_OS_MODULE_INFO and DT_OS_MODULE_INFO_1 present - processing both");
+	}
+	if (elf->HasDynValue(DT_OS_IMPORT_LIB) && elf->HasDynValue(DT_OS_IMPORT_LIB_1)) {
+		LOG_WARNING(LOG_KytyLoader, "Both DT_OS_IMPORT_LIB and DT_OS_IMPORT_LIB_1 present - processing both");
+	}
+	if (elf->HasDynValue(DT_OS_EXPORT_LIB) && elf->HasDynValue(DT_OS_EXPORT_LIB_1)) {
+		LOG_WARNING(LOG_KytyLoader, "Both DT_OS_EXPORT_LIB and DT_OS_EXPORT_LIB_1 present - processing both");
+	}
 	GetDynModules(elf, &program->dynamic_info->import_modules, program->dynamic_info->str_table,
 	              DT_OS_NEEDED_MODULE);
 	GetDynModules(elf, &program->dynamic_info->import_modules, program->dynamic_info->str_table,
