@@ -1,86 +1,67 @@
-# Build directories
-_Build/
-build/
-cmake-build-*/
-out/
-
-# Compiled objects
+```
+# Compiled and build artifacts
 *.o
 *.obj
 *.a
-*.lib
 *.so
-*.so.*
-*.dylib
 *.dll
 *.exe
-*.exp
-*.ilk
-*.pdb
+*.out
 
-# CMake
-CMakeCache.txt
-CMakeFiles/
-cmake_install.cmake
-Makefile
-compile_commands.json
-install_manifest.txt
-_deps/
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+target/
+.gradle/
 
-# IDE
-.idea/
-.vscode/
+# Logs and temp files
+*.log
+*.tmp
 *.swp
-*.swo
-*~
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+
+# System files
 .DS_Store
 Thumbs.db
 
-# Runtime
-*.log
-core
-core.*
-vgcore.*
-*.trace
-shader_cache/
-pipeline_cache/
-config.ini
-config.json
-user_settings/
+# Coverage
+coverage/
+htmlcov/
+.coverage
 
-# Game files (NEVER COMMIT)
-*.pkg
-*.pup
-*.elf
-*.bin
-*.iso
-*.cue
-*.self
-*.sprx
-*.rco
-*.at9
-*.trp
-save_data/
-game_data/
-
-# Secrets (NEVER COMMIT)
-*.pem
-*.key
-*.p12
-*.pfx
-.env
-.env.*
-credentials/
-tokens/
-
-# Archives (release artifacts go to GitHub Releases, not git)
-*.tar.xz
-*.tar.gz
+# Compressed files
 *.zip
-SHA256SUMS
-
-# Profiler / debug
-*.prof
-*.perf
-tracy/
-renderdoc/
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+```
