@@ -1,61 +1,67 @@
 ```
-# Dependencies and build artifacts
+# Dependencies
 3rdparty/
 
-# Compiled files
-*.o
-*.obj
-*.a
-*.so
-*.dll
-*.exe
-*.pyc
-*.class
-
-# Build directories (if any)
+# Build artifacts
 build/
 dist/
 target/
 
-# Package managers
-node_modules/
-vendor/
+# Logs and temp files
+*.log
+*.tmp
 
-# Virtual environments
-venv/
-.venv/
+# Editors
+.vscode/
+.idea/
+
+# Environment
 .env
 .env.local
 *.env.*
 
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Coverage
-coverage/
-htmlcov/
-.coverage
-
-# Python cache
+# Python
 __pycache__/
 *.pyc
 *.pyo
-.Python
-*.so
+*.pyd
 
-# Temporary files
-*.tmp
-*.temp
+# Node.js
+node_modules/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+target/
+.gradle/
+
+# C/C++
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+*.out
+
+# Rust
+Cargo.lock
+target/
+
+# Go
+*.o
+*.a
+*.so
+*.exe
+*.dll
+*.dylib
+*.test
+*.profdata
+cover.out
 
 # Compressed files
 *.zip
@@ -80,4 +86,8 @@ __pycache__/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+
+# System files
+.DS_Store
+Thumbs.db
 ```
