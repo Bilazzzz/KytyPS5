@@ -2,48 +2,82 @@
 # Dependencies and build artifacts
 3rdparty/
 
-# Logs and temp files
-*.log
-*.tmp
-*.swp
+# Compiled files
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.exe
+*.pyc
+*.class
 
-# Editors
-.vscode/
-.idea/
+# Build directories (if any)
+build/
+dist/
+target/
 
-# Environment
+# Package managers
+node_modules/
+vendor/
+
+# Virtual environments
+venv/
+.venv/
 .env
 .env.local
 *.env.*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
 
 # Coverage
 coverage/
 htmlcov/
 .coverage
 
-# Python
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
 .Python
-env/
-venv/
-.venv/
-pip-log.txt
-pip-delete-this-directory.txt
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.log
-.git*
-!gitkeep
-!.gitattributes
-!.gitignore
-.DS_Store
-Thumbs.db
+*.so
+
+# Temporary files
+*.tmp
+*.temp
+
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
 ```
