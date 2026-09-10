@@ -90,4 +90,9 @@ cover.out
 # System files
 .DS_Store
 Thumbs.db
-```
+```/build/
+build/
+build-linux/
+build-windows/
+build/
+*.user
