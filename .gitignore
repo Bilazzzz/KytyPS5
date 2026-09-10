@@ -11,51 +11,53 @@
 *.exe
 *.pyc
 *.class
+*.out
 
-# Build directories (if any)
+# Build directories
 build/
 dist/
 target/
 
-# Package managers
-node_modules/
-vendor/
-
-# Virtual environments
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
 venv/
 .venv/
 .env
 .env.local
-*.env.*
+.env.*
 
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS files
-.DS_Store
-Thumbs.db
+# Node.js specific
+node_modules/
 
 # Logs
 *.log
 
-# Coverage
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# Coverage reports
 coverage/
 htmlcov/
 .coverage
 
-# Python cache
-__pycache__/
-*.pyc
-*.pyo
-.Python
-*.so
+# MyPy cache
+.mypy_cache/
 
-# Temporary files
-*.tmp
-*.temp
+# PyTest cache
+.pytest_cache/
 
 # Compressed files
 *.zip
