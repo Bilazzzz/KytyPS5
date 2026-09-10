@@ -96,3 +96,5 @@ build-linux/
 build-windows/
 build/
 *.user
+build/
+build-linux/
