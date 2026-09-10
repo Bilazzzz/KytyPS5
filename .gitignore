@@ -1,8 +1,86 @@
-# Visual Studio 2015 cache/options directory
-.vs/
-.idea/
-build/
-_Build/vscode-clang/
+# Build directories
 _Build/
-cmake-build-debug/
-_PipelineCache/
+build/
+cmake-build-*/
+out/
+
+# Compiled objects
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.exp
+*.ilk
+*.pdb
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+install_manifest.txt
+_deps/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Runtime
+*.log
+core
+core.*
+vgcore.*
+*.trace
+shader_cache/
+pipeline_cache/
+config.ini
+config.json
+user_settings/
+
+# Game files (NEVER COMMIT)
+*.pkg
+*.pup
+*.elf
+*.bin
+*.iso
+*.cue
+*.self
+*.sprx
+*.rco
+*.at9
+*.trp
+save_data/
+game_data/
+
+# Secrets (NEVER COMMIT)
+*.pem
+*.key
+*.p12
+*.pfx
+.env
+.env.*
+credentials/
+tokens/
+
+# Archives (release artifacts go to GitHub Releases, not git)
+*.tar.xz
+*.tar.gz
+*.zip
+SHA256SUMS
+
+# Profiler / debug
+*.prof
+*.perf
+tracy/
+renderdoc/
